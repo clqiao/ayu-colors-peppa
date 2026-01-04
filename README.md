@@ -34,3 +34,9 @@ dark.syntax.string.rgb()     // [170, 217, 76]
 ## License
 
 MIT
+
+## Develop
+- 执行 npm install，会安装依赖的 node modules
+- 执行 npm run build （调用 tsc，输出到 dist/，包括 colors.js/color.js 与类型定义）。
+- 可选资源：npm run svg 会先 build，再产出 colors.svg 和 palette.svg。
+- 验证：npm test 会在 build 后运行 Node test（dist/test.js）。
