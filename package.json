@@ -1,7 +1,7 @@
 {
-  "name": "ayu",
+  "name": "ayu-peppa",
   "version": "9.0.0",
-  "description": "The ayu sublime theme as a color palette",
+  "description": "The ayu-peppa sublime theme as a color palette",
   "type": "module",
   "exports": {
     ".": {
@@ -24,10 +24,10 @@
     "dist"
   ],
   "repository": {
-    "url": "https://github.com/ayu-theme/ayu-colors",
+    "url": "https://github.com/clqiao/ayu-colors-peppa",
     "type": "git"
   },
-  "author": "Konstantin Pschera <me@kons.ch>",
+  "author": "clqiao<clqiao@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": ">=22.18.0"
