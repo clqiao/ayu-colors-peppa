@@ -5,15 +5,21 @@ import os from 'node:os'
 import path from 'node:path'
 
 // Load and embed custom font (compressed Latin subset)
-const fontPath = path.join(os.homedir(), 'Developer/site/public/fonts/IosevkaCustom-Regular.woff2')
-const fontBase64 = fs.readFileSync(fontPath).toString('base64')
-const fontStyle = `
+const fontPath = path.resolve(process.cwd(), '../vscode-ayu-peppa-pig/fonts/IosevkaCustom-Regular.ttf')
+let fontStyle = ''
+
+try {
+  const fontBase64 = fs.readFileSync(fontPath).toString('base64')
+  fontStyle = `
   <style>
     @font-face {
       font-family: 'IosevkaCustom';
-      src: url('data:font/woff2;base64,${fontBase64}') format('woff2');
+      src: url('data:font/ttf;base64,${fontBase64}') format('truetype');
     }
   </style>`
+} catch (error) {
+  console.warn('Font not found, skipping embedding:', error.message)
+}
 
 const PANEL_WIDTH = 520
 const PANEL_HEIGHT = 230
@@ -27,7 +33,8 @@ const GUTTER_WIDTH = 32
 const themes = [
   { name: 'Light', scheme: colors.light },
   { name: 'Mirage', scheme: colors.mirage },
-  { name: 'Dark', scheme: colors.dark }
+  { name: 'Dark', scheme: colors.dark },
+  { name: 'Shiba Inu Light', scheme: colors.shibaInuLight }
 ]
 
 // VCS indicators per line: null, 'added', or 'modified'
@@ -157,7 +164,7 @@ function renderPanel(scheme, name, offsetY) {
   const uiFg = scheme.ui.fg.hex()
   const gutterColor = scheme.editor.gutter.normal.hex()
   const lineColor = scheme.editor.line.hex()
-  const accent = scheme.common.accent.hex()
+  const accent = scheme.common.accent.tint.hex()
   const vcsAdded = scheme.vcs.added.hex()
   const vcsModified = scheme.vcs.modified.hex()
   const panelBorder = scheme.ui.line.hex()
@@ -306,7 +313,7 @@ const categories = [
   },
   {
     name: 'Common',
-    colors: ['accent', 'error']
+    colors: ['accent.tint', 'accent.on', 'error']
   }
 ]
 
@@ -335,15 +342,12 @@ function generatePalette() {
 
   // Header row
   svg += `<text x="${P_PADDING}" y="${y + 16}" font-size="13" font-weight="600" fill="#5c6166">Color</text>`
-  svg += `<text x="${P_PADDING + LABEL_WIDTH + SWATCH_WIDTH / 2}" y="${
-    y + 16
-  }" font-size="12" font-weight="500" fill="#8a9199" text-anchor="middle">Light</text>`
-  svg += `<text x="${P_PADDING + LABEL_WIDTH + SWATCH_WIDTH + SWATCH_GAP + SWATCH_WIDTH / 2}" y="${
-    y + 16
-  }" font-size="12" font-weight="500" fill="#8a9199" text-anchor="middle">Mirage</text>`
-  svg += `<text x="${P_PADDING + LABEL_WIDTH + (SWATCH_WIDTH + SWATCH_GAP) * 2 + SWATCH_WIDTH / 2}" y="${
-    y + 16
-  }" font-size="12" font-weight="500" fill="#8a9199" text-anchor="middle">Dark</text>`
+  
+  themes.forEach((theme, index) => {
+    const x = P_PADDING + LABEL_WIDTH + index * (SWATCH_WIDTH + SWATCH_GAP) + SWATCH_WIDTH / 2
+    svg += `<text x="${x}" y="${y + 16}" font-size="12" font-weight="500" fill="#8a9199" text-anchor="middle">${theme.name}</text>`
+  })
+
   y += 32
 
   for (const category of categories) {
@@ -354,38 +358,25 @@ function generatePalette() {
     y += 32
 
     for (const colorName of category.colors) {
-      const lightColor = getPaletteColor(colors.light, category.name, colorName)
-      const mirageColor = getPaletteColor(colors.mirage, category.name, colorName)
-      const darkColor = getPaletteColor(colors.dark, category.name, colorName)
+      const themeColors = themes.map(t => ({
+        theme: t,
+        color: getPaletteColor(t.scheme, category.name, colorName)
+      }))
 
-      if (!lightColor || !mirageColor || !darkColor) continue
+      if (themeColors.some(tc => !tc.color)) continue
 
       // Color name
       svg += `<text x="${P_PADDING}" y="${y + 22}" font-size="13" fill="#5c6166">${colorName}</text>`
 
-      // Light swatch
-      const lHex = lightColor.hex()
-      const lx = P_PADDING + LABEL_WIDTH
-      svg += `<rect x="${lx}" y="${y}" width="${SWATCH_WIDTH}" height="${SWATCH_HEIGHT}" rx="4" fill="${lHex}" />`
-      svg += `<text x="${lx + SWATCH_WIDTH / 2}" y="${y + 20}" font-size="10" fill="${contrastColor(
-        lHex.slice(0, 7)
-      )}" text-anchor="middle" font-family="IosevkaCustom, monospace">${lHex.toUpperCase()}</text>`
-
-      // Mirage swatch
-      const mHex = mirageColor.hex()
-      const mx = lx + SWATCH_WIDTH + SWATCH_GAP
-      svg += `<rect x="${mx}" y="${y}" width="${SWATCH_WIDTH}" height="${SWATCH_HEIGHT}" rx="4" fill="${mHex}" />`
-      svg += `<text x="${mx + SWATCH_WIDTH / 2}" y="${y + 20}" font-size="10" fill="${contrastColor(
-        mHex.slice(0, 7)
-      )}" text-anchor="middle" font-family="IosevkaCustom, monospace">${mHex.toUpperCase()}</text>`
-
-      // Dark swatch
-      const dHex = darkColor.hex()
-      const dx = mx + SWATCH_WIDTH + SWATCH_GAP
-      svg += `<rect x="${dx}" y="${y}" width="${SWATCH_WIDTH}" height="${SWATCH_HEIGHT}" rx="4" fill="${dHex}" />`
-      svg += `<text x="${dx + SWATCH_WIDTH / 2}" y="${y + 20}" font-size="10" fill="${contrastColor(
-        dHex.slice(0, 7)
-      )}" text-anchor="middle" font-family="IosevkaCustom, monospace">${dHex.toUpperCase()}</text>`
+      themeColors.forEach((tc, index) => {
+        const hex = tc.color.hex()
+        const x = P_PADDING + LABEL_WIDTH + index * (SWATCH_WIDTH + SWATCH_GAP)
+        
+        svg += `<rect x="${x}" y="${y}" width="${SWATCH_WIDTH}" height="${SWATCH_HEIGHT}" rx="4" fill="${hex}" />`
+        svg += `<text x="${x + SWATCH_WIDTH / 2}" y="${y + 20}" font-size="10" fill="${contrastColor(
+          hex.slice(0, 7)
+        )}" text-anchor="middle" font-family="IosevkaCustom, monospace">${hex.toUpperCase()}</text>`
+      })
 
       y += ROW_HEIGHT
     }
