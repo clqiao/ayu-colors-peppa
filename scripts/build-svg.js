@@ -304,12 +304,24 @@ const categories = [
       'gutter.active',
       'gutter.normal',
       'indentGuide.active',
-      'indentGuide.normal'
+      'indentGuide.normal',
+      'indentGuide1.active',
+      'indentGuide1.normal',
+      'indentGuide2.active',
+      'indentGuide2.normal',
+      'indentGuide3.active',
+      'indentGuide3.normal',
+      'indentGuide4.active',
+      'indentGuide4.normal',
+      'indentGuide5.active',
+      'indentGuide5.normal',
+      'indentGuide6.active',
+      'indentGuide6.normal'
     ]
   },
   {
     name: 'UI',
-    colors: ['fg', 'bg', 'line', 'selection.active', 'selection.normal', 'panel.bg', 'panel.shadow']
+    colors: ['fg', 'bg', 'secondary_bg', 'line', 'selection.active', 'selection.normal', 'panel.bg', 'panel.shadow']
   },
   {
     name: 'Common',

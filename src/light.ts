@@ -41,7 +41,7 @@ const editor = {
   /** Main editor text color */
   fg: e`5C6166`,
   /** Editor background */
-  bg: e`FCFCFC`,
+  bg: e`ffffff`,
   /** Current line highlight background */
   line: e`828E9F`.alpha(0.1),
   selection: {
@@ -64,19 +64,46 @@ const editor = {
   },
   indentGuide: {
     /** Indent guide at current level */
-    active: e`828E9F`.alpha(0.35),
+    active: e`eda8b2`,
     /** Indent guides at other levels */
-    normal: e`828E9F`.alpha(0.18)
+    normal: e`eda8b2`.alpha(0.5)
   }
+    ,
+    indentGuide1: {
+      active: e`ff9300`.alpha(0.8),
+      normal: e`ff9300`.alpha(0.3)
+    },
+    indentGuide2: {
+      active: e`ffcc00`,
+      normal: e`ffcc00`.alpha(0.5)
+    },
+    indentGuide3: {
+      active: e`00bf00`.alpha(0.8),
+      normal: e`00bf00`.alpha(0.3)
+    },
+    indentGuide4: {
+      active: e`098aec`.alpha(0.8),
+      normal: e`098aec`.alpha(0.3)
+    },
+    indentGuide5: {
+      active: e`9437ff`.alpha(0.8),
+      normal: e`9437ff`.alpha(0.3)
+    },
+    indentGuide6: {
+      active: e`ff2f92`.alpha(0.8),
+      normal: e`ff2f92`.alpha(0.3)
+    }
 }
 
 const ui = {
   /** UI text (sidebars, panels, menus) */
-  fg: u`828E9F`,
+  fg: u`a08080`, // a08080
   /** UI background areas */
-  bg: u`F8F9FA`,
+  bg: u`f8e8e8`,
+  /** Secondary UI background (derived from bg) */
+  secondary_bg: u`fcf8f8`,
   /** Separator lines between UI sections */
-  line: u`6B7D8F`.alpha(0.12),
+  line: u`c8a8a8`.alpha(0.5),
   selection: {
     /** Active/hovered UI item */
     active: u`56728F`.alpha(0.12),
@@ -94,7 +121,7 @@ const ui = {
 const common = {
   accent: {
     /** Primary accent color for highlights, caret, focus states */
-    tint: u`F29718`,
+    tint: u`F59DA9`, // fd6f3b 3DB6EF eda8b2
     /** Content color on accent backgrounds */
     on: u`804B00`
   },

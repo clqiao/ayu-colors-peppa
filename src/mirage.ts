@@ -68,6 +68,31 @@ const editor = {
     /** Indent guides at other levels */
     normal: e`8A9199`.alpha(0.18)
   }
+  ,
+  indentGuide1: {
+    active: e`8A9199`.alpha(0.35),
+    normal: e`8A9199`.alpha(0.18)
+  },
+  indentGuide2: {
+    active: e`8A9199`.alpha(0.35),
+    normal: e`8A9199`.alpha(0.18)
+  },
+  indentGuide3: {
+    active: e`8A9199`.alpha(0.35),
+    normal: e`8A9199`.alpha(0.18)
+  },
+  indentGuide4: {
+    active: e`8A9199`.alpha(0.35),
+    normal: e`8A9199`.alpha(0.18)
+  },
+  indentGuide5: {
+    active: e`8A9199`.alpha(0.35),
+    normal: e`8A9199`.alpha(0.18)
+  },
+  indentGuide6: {
+    active: e`8A9199`.alpha(0.35),
+    normal: e`8A9199`.alpha(0.18)
+  }
 }
 
 const ui = {
@@ -75,6 +100,8 @@ const ui = {
   fg: u`707A8C`,
   /** UI background areas */
   bg: u`1F2430`,
+  /** Secondary UI background (derived from bg) */
+  secondary_bg: u`1F2430`.alpha(0.4),
   /** Separator lines between UI sections */
   line: u`171B24`,
   selection: {
