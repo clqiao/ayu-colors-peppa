@@ -1,7 +1,7 @@
 {
-  "name": "ayu-peppa",
+  "name": "ayu-cola",
   "version": "9.0.0",
-  "description": "The ayu-peppa sublime theme as a color palette",
+  "description": "The ayu-cola sublime theme as a color palette",
   "type": "module",
   "exports": {
     ".": {

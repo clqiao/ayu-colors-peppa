@@ -43,7 +43,7 @@ const editor = {
   /** Editor background */
   bg: e`ffffff`,
   /** Current line highlight background */
-  line: e`828E9F`.alpha(0.1),
+  line: e`F59DA9`.alpha(0.15),
   selection: {
     /** Selection highlight when editor is focused */
     active: e`035BD6`.alpha(0.15),
@@ -112,7 +112,7 @@ const ui = {
   },
   panel: {
     /** Panel backgrounds (explorer, debug) */
-    bg: u`FAFAFA`,
+    bg: u`fcf8f8`,
     /** Drop shadows for panels */
     shadow: u`6B7D8F`.alpha(0.07)
   }
