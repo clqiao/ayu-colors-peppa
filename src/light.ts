@@ -58,9 +58,9 @@ const editor = {
   },
   gutter: {
     /** Line number for current line */
-    active: e`828E9F`.alpha(0.8),
+    active: e`a08080`.alpha(0.8), // 828E9F
     /** Line numbers for other lines */
-    normal: e`828E9F`.alpha(0.4)
+    normal: e`a08080`.alpha(0.4) // 828E9F
   },
   indentGuide: {
     /** Indent guide at current level */
@@ -106,9 +106,9 @@ const ui = {
   line: u`c8a8a8`.alpha(0.5),
   selection: {
     /** Active/hovered UI item */
-    active: u`56728F`.alpha(0.12),
+    active: u`F59DA9`.alpha(0.4), // 56728F
     /** Selected UI item */
-    normal: u`6B7D8F`.alpha(0.12)
+    normal: u`F59DA9`.alpha(0.2) // 6B7D8F
   },
   panel: {
     /** Panel backgrounds (explorer, debug) */
@@ -127,6 +127,11 @@ const common = {
   },
   /** Error messages and error states */
   error: u`E65050`
+    ,
+    /** Basic primary colors for use in themes */
+    red: u`FF0000`,
+    green: u`00FF00`,
+    blue: u`0000FF`
 }
 
 export default {

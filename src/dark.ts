@@ -127,6 +127,11 @@ const common = {
   },
   /** Error messages and error states */
   error: u`D95757`
+  ,
+  /** Basic primary colors for use in themes */
+  red: u`FF0000`,
+  green: u`00FF00`,
+  blue: u`0000FF`
 }
 
 export default {
