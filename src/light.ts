@@ -157,11 +157,31 @@ const common = {
     blue: u`0000FF`
 }
 
+const terminal = {
+  black: u`240219`,
+  red: syntax.markup.darken(0.1),
+  green: vcs.added,
+  yellow: syntax.func.darken(0.1),
+  blue: syntax.entity.darken(0.1),
+  magenta: syntax.constant.darken(0.1),
+  cyan: syntax.regexp.darken(0.1),
+  white: u`BFBFBF`,
+  brightBlack: u`666666`,
+  brightRed: syntax.markup,
+  brightGreen: syntax.string,
+  brightYellow: syntax.func,
+  brightBlue: syntax.entity,
+  brightMagenta: syntax.constant,
+  brightCyan: syntax.regexp,
+  brightWhite: u`E5E5E5`
+}
+
 export default {
   syntax,
   vcs,
   editor,
   ui,
   unbordered_ui,
-  common
+  common,
+  terminal
 }

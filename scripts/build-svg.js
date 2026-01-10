@@ -246,7 +246,7 @@ function renderPanel(scheme, name, offsetY) {
   return svg
 }
 
-const totalHeight = PANEL_HEIGHT * 3 + GAP * 2
+const totalHeight = PANEL_HEIGHT * themes.length + GAP * (themes.length - 1)
 const svgContent = `<svg width="100%" viewBox="0 0 ${PANEL_WIDTH} ${totalHeight}" xmlns="http://www.w3.org/2000/svg">
   ${fontStyle}
   <g>
@@ -326,6 +326,27 @@ const categories = [
   {
     name: 'Common',
     colors: ['accent.tint', 'accent.on', 'error']
+  },
+  {
+    name: 'Terminal',
+    colors: [
+      'black',
+      'red',
+      'green',
+      'yellow',
+      'blue',
+      'magenta',
+      'cyan',
+      'white',
+      'brightBlack',
+      'brightRed',
+      'brightGreen',
+      'brightYellow',
+      'brightBlue',
+      'brightMagenta',
+      'brightCyan',
+      'brightWhite'
+    ]
   }
 ]
 
