@@ -135,7 +135,7 @@ const unbordered_ui = {
   },
   panel: {
     /** Panel backgrounds (explorer, debug) */
-    bg: u`f3e3d4`, // f8e8e8
+    bg: u`FFF2E5`, // f8e8e8 f3e3d4
     /** Drop shadows for panels */
     shadow: u`6B7D8F`.alpha(0.7)
   }
@@ -158,21 +158,21 @@ const common = {
 }
 
 const terminal = {
-  black: u`240219`,
-  red: syntax.markup.darken(0.1),
-  green: vcs.added,
-  yellow: syntax.func.darken(0.1),
-  blue: syntax.entity.darken(0.1),
-  magenta: syntax.constant.darken(0.1),
-  cyan: syntax.regexp.darken(0.1),
+  black: u`000000`,
+  red: u`990000`,
+  green: u`00A600`,
+  yellow: u`999900`,
+  blue: u`8459B2`,
+  magenta: u`B200B2`,
+  cyan: u`00B0D9`,
   white: u`BFBFBF`,
   brightBlack: u`666666`,
-  brightRed: syntax.markup,
-  brightGreen: syntax.string,
-  brightYellow: syntax.func,
-  brightBlue: syntax.entity,
-  brightMagenta: syntax.constant,
-  brightCyan: syntax.regexp,
+  brightRed: u`E50000`,
+  brightGreen: u`00D900`,
+  brightYellow: u`E5E500`,
+  brightBlue: u`A179CC`,
+  brightMagenta: u`E500E5`,
+  brightCyan: u`00E5E5`,
   brightWhite: u`E5E5E5`
 }
 
