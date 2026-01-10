@@ -118,6 +118,29 @@ const ui = {
   }
 }
 
+const unbordered_ui = {
+  /** UI text (sidebars, panels, menus) */
+  fg: u`555E73`,
+  /** UI background areas */
+  bg: u`0D1017`,
+  /** Secondary UI background (derived from bg) */
+  secondary_bg: u`0D1017`.alpha(0.4),
+  /** Separator lines between UI sections */
+  line: u`1B1F29`,
+  selection: {
+    /** Active/hovered UI item */
+    active: u`475266`.alpha(0.25),
+    /** Selected UI item */
+    normal: u`475266`.alpha(0.2)
+  },
+  panel: {
+    /** Panel backgrounds (explorer, debug) */
+    bg: u`141821`,
+    /** Drop shadows for panels */
+    shadow: u`000000`.alpha(0.5)
+  }
+}
+
 const common = {
   accent: {
     /** Primary accent color for highlights, caret, focus states */
@@ -139,5 +162,6 @@ export default {
   vcs,
   editor,
   ui,
+  unbordered_ui,
   common
 }
