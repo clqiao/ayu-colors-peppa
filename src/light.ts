@@ -116,7 +116,7 @@ const ui = {
     /** Panel backgrounds (explorer, debug) */
     bg: u`FFF2E5`,
     /** Drop shadows for panels */
-    shadow: u`6B7D8F`.alpha(0.7)
+    shadow: u`6B7D8F`.alpha(0.3)
   },
   // Semantic UI colors
   focus_border: u`f8e8e8`, // unbordered_ui.secondary_bg
