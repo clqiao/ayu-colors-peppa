@@ -119,7 +119,7 @@ const ui = {
     shadow: u`6B7D8F`.alpha(0.3)
   },
   // Semantic UI colors
-  focus_border: u`f8e8e8`.alpha(0), // unbordered_ui.secondary_bg
+  focus_border: u`f8e8e8`, // unbordered_ui.secondary_bg
   activity_bar_border: u`c8a8a8`.alpha(0), // unbordered_ui.line
   minimap_bg: u`f8e8e8`, // unbordered_ui.secondary_bg
   side_bar_bg: u`f8e8e8`, // unbordered_ui.secondary_bg
