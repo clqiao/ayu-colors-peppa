@@ -124,7 +124,6 @@ const ui = {
   minimap_bg: u`f8e8e8`, // unbordered_ui.secondary_bg
   side_bar_bg: u`f8e8e8`, // unbordered_ui.secondary_bg
   editor_group_header_bg: u`f8e8e8`, // unbordered_ui.secondary_bg
-  panel_bg: u`FFF2E5`, // unbordered_ui.panel.bg
   status_bar_bg: u`F4CBC8`, // unbordered_ui.bg
   title_bar_bg: u`F4CBC8` // unbordered_ui.bg
 }

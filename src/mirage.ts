@@ -122,7 +122,6 @@ const ui = {
   minimap_bg: u`1F2430`.alpha(0.4), // unbordered_ui.secondary_bg
   side_bar_bg: u`1F2430`.alpha(0.4), // unbordered_ui.secondary_bg
   editor_group_header_bg: u`1F2430`.alpha(0.4), // unbordered_ui.secondary_bg
-  panel_bg: u`282E3B`, // unbordered_ui.panel.bg
   status_bar_bg: u`1F2430`, // unbordered_ui.bg
   title_bar_bg: u`1F2430` // unbordered_ui.bg
 }

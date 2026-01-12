@@ -88,7 +88,6 @@ const ui = {
   minimap_bg: e`10141C`, // editor.bg
   side_bar_bg: u`0D1017`.alpha(0.4), // ui.secondary_bg
   editor_group_header_bg: u`0D1017`.alpha(0.4), // ui.secondary_bg
-  panel_bg: u`0D1017`.alpha(0.4), // ui.secondary_bg
   status_bar_bg: u`0D1017`, // ui.bg
   title_bar_bg: u`0D1017` // ui.bg
 }

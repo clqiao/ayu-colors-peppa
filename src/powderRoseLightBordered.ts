@@ -82,7 +82,7 @@ const ui = {
   },
   panel: {
     bg: u`fcf8f8`,
-    shadow: u`6B7D8F`.alpha(0.07)
+    shadow: u`6B7D8F`.alpha(0.3)
   },
   // Semantic UI colors
   focus_border: u`c8a8a8`.alpha(0.5), // ui.line
@@ -90,7 +90,6 @@ const ui = {
   minimap_bg: e`ffffff`, // editor.bg
   side_bar_bg: u`fcf8f8`, // ui.secondary_bg
   editor_group_header_bg: u`fcf8f8`, // ui.secondary_bg
-  panel_bg: u`fcf8f8`, // ui.secondary_bg
   status_bar_bg: u`f8e8e8`, // ui.bg
   title_bar_bg: u`f8e8e8` // ui.bg
 }
