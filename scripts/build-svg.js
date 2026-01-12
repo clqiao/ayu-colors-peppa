@@ -33,7 +33,10 @@ const GUTTER_WIDTH = 32
 const themes = [
   { name: 'Light', scheme: colors.light },
   { name: 'Mirage', scheme: colors.mirage },
-  { name: 'Dark', scheme: colors.dark }
+  { name: 'Dark', scheme: colors.dark },
+  { name: 'Light Bordered', scheme: colors.lightBordered },
+  { name: 'Mirage Bordered', scheme: colors.mirageBordered },
+  { name: 'Dark Bordered', scheme: colors.darkBordered }
 ]
 
 // VCS indicators per line: null, 'added', or 'modified'
@@ -260,7 +263,7 @@ console.log('Generated colors.svg')
 // Palette SVG - Debug reference with all colors
 // ============================================
 
-const PALETTE_WIDTH = 720
+const PALETTE_WIDTH = 850
 const SWATCH_WIDTH = 100
 const SWATCH_HEIGHT = 32
 const SWATCH_GAP = 12
