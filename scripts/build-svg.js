@@ -33,8 +33,7 @@ const GUTTER_WIDTH = 32
 const themes = [
   { name: 'Light', scheme: colors.light },
   { name: 'Mirage', scheme: colors.mirage },
-  { name: 'Dark', scheme: colors.dark },
-  { name: 'Shiba Inu Light', scheme: colors.shibaInuLight }
+  { name: 'Dark', scheme: colors.dark }
 ]
 
 // VCS indicators per line: null, 'added', or 'modified'
