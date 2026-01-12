@@ -99,30 +99,7 @@ const editor = {
 
 const ui = {
   /** UI text (sidebars, panels, menus) */
-  fg: u`a08080`, // a08080
-  /** UI background areas */
-  bg: u`f8e8e8`,
-  /** Secondary UI background (derived from bg) */
-  secondary_bg: u`fcf8f8`,
-  /** Separator lines between UI sections */
-  line: u`c8a8a8`.alpha(0.5),
-  selection: {
-    /** Active/hovered UI item */
-    active: u`F59DA9`.alpha(0.4), // 56728F
-    /** Selected UI item */
-    normal: u`F59DA9`.alpha(0.2) // 6B7D8F
-  },
-  panel: {
-    /** Panel backgrounds (explorer, debug) */
-    bg: u`fcf8f8`,
-    /** Drop shadows for panels */
-    shadow: u`6B7D8F`.alpha(0.07)
-  }
-}
-
-const unbordered_ui = {
-  /** UI text (sidebars, panels, menus) */
-  fg: u`806060`, // a08080
+  fg: u`806060`,
   /** UI background areas */
   bg: u`F4CBC8`,
   /** Secondary UI background (derived from bg) */
@@ -131,22 +108,31 @@ const unbordered_ui = {
   line: u`c8a8a8`.alpha(0),
   selection: {
     /** Active/hovered UI item */
-    active: u`F59DA9`.alpha(0.6), // 56728F
+    active: u`F59DA9`.alpha(0.6),
     /** Selected UI item */
-    normal: u`F59DA9`.alpha(0.3) // 6B7D8F
+    normal: u`F59DA9`.alpha(0.3)
   },
   panel: {
     /** Panel backgrounds (explorer, debug) */
-    bg: u`FFF2E5`, // f8e8e8 f3e3d4
+    bg: u`FFF2E5`,
     /** Drop shadows for panels */
     shadow: u`6B7D8F`.alpha(0.7)
-  }
+  },
+  // Semantic UI colors
+  focus_border: u`f8e8e8`, // unbordered_ui.secondary_bg
+  activity_bar_border: u`c8a8a8`.alpha(0), // unbordered_ui.line
+  minimap_bg: u`f8e8e8`, // unbordered_ui.secondary_bg
+  side_bar_bg: u`f8e8e8`, // unbordered_ui.secondary_bg
+  editor_group_header_bg: u`f8e8e8`, // unbordered_ui.secondary_bg
+  panel_bg: u`FFF2E5`, // unbordered_ui.panel.bg
+  status_bar_bg: u`F4CBC8`, // unbordered_ui.bg
+  title_bar_bg: u`F4CBC8` // unbordered_ui.bg
 }
 
 const common = {
   accent: {
     /** Primary accent color for highlights, caret, focus states */
-    tint: u`F59DA9`, // fd6f3b 3DB6EF eda8b2
+    tint: u`ED988B`, // fd6f3b 3DB6EF eda8b2
     /** Content color on accent backgrounds */
     on: u`804B00`
   },
@@ -183,7 +169,6 @@ export default {
   vcs,
   editor,
   ui,
-  unbordered_ui,
   common,
   terminal
 }
