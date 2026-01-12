@@ -1,7 +1,9 @@
 import color from './color.js'
 
-const u = color('F8F9FA')
-const e = color('FCFCFC')
+// u 用于 UI 颜色
+// e 用于 编辑器 颜色
+const u = color('f8e8e8')
+const e = color('ffffff')
 
 const syntax = {
   /** HTML/XML tags, language variables, library classes, CSS properties */
