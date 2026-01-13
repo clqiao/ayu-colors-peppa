@@ -6,6 +6,7 @@ import color from './color.js'
 // secondary_bg
 // panel bg
 // scheme.ui.fg
+// scheme.editor.line
 
 const u = color('202224') // primary bg
 const e = color('383a3c') // editor bg

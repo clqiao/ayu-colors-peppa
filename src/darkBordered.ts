@@ -79,7 +79,7 @@ const ui = {
     normal: u`475266`.alpha(0.2)
   },
   panel: {
-    bg: u`413D39`,
+    bg: u`2a2c2e`,
     shadow: u`000000`.alpha(0.5)
   },
   // Semantic UI colors

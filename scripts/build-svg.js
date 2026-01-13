@@ -1,4 +1,5 @@
 import fs from 'node:fs'
+import { Resvg } from '@resvg/resvg-js'
 import * as colors from '../dist/colors.js'
 import { Color } from '../dist/color.js'
 import os from 'node:os'
@@ -26,7 +27,7 @@ const PANEL_HEIGHT = 230
 const GAP = 8
 const TITLE_HEIGHT = 32
 const LINE_HEIGHT = 22
-const CHAR_WIDTH = 7.5
+const CHAR_WIDTH = 8.2
 const PADDING = 16
 const GUTTER_WIDTH = 32
 
@@ -149,17 +150,15 @@ function getColor(scheme, key) {
 }
 
 function renderCodeLine(scheme, tokens, x, y) {
-  let currentX = x
   let tspans = ''
 
   for (const [text, colorKey] of tokens) {
     const color = getColor(scheme, colorKey)
     const escapedText = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-    tspans += `<tspan x="${currentX}" fill="${color}">${escapedText}</tspan>`
-    currentX += text.length * CHAR_WIDTH
+    tspans += `<tspan fill="${color}">${escapedText}</tspan>`
   }
 
-  return `<text y="${y}" font-family="IosevkaCustom, monospace" font-size="14">${tspans}</text>`
+  return `<text x="${x}" y="${y}" font-family="IosevkaCustom, monospace" font-size="14" xml:space="preserve">${tspans}</text>`
 }
 
 function renderPanel(scheme, name, offsetY) {
@@ -251,7 +250,7 @@ function renderPanel(scheme, name, offsetY) {
 }
 
 const totalHeight = PANEL_HEIGHT * themes.length + GAP * (themes.length - 1)
-const svgContent = `<svg width="100%" viewBox="0 0 ${PANEL_WIDTH} ${totalHeight}" xmlns="http://www.w3.org/2000/svg">
+const svgContent = `<svg width="${PANEL_WIDTH}" height="${totalHeight}" viewBox="0 0 ${PANEL_WIDTH} ${totalHeight}" xmlns="http://www.w3.org/2000/svg">
   ${fontStyle}
   <g>
     ${themes.map((t, i) => renderPanel(t.scheme, t.name, i * (PANEL_HEIGHT + GAP))).join('\n    ')}
@@ -261,11 +260,18 @@ const svgContent = `<svg width="100%" viewBox="0 0 ${PANEL_WIDTH} ${totalHeight}
 fs.writeFileSync('colors.svg', svgContent, 'utf-8')
 console.log('Generated colors.svg')
 
+const resvgColors = new Resvg(svgContent, {
+  background: 'transparent',
+  fitTo: { mode: 'width', value: PANEL_WIDTH * 2 }
+})
+fs.writeFileSync('colors.png', resvgColors.render().asPng())
+console.log('Generated colors.png')
+
 // ============================================
 // Palette SVG - Debug reference with all colors
 // ============================================
 
-const PALETTE_WIDTH = 850
+const PALETTE_WIDTH = 1100
 const SWATCH_WIDTH = 100
 const SWATCH_HEIGHT = 32
 const SWATCH_GAP = 12
@@ -425,7 +431,7 @@ function generatePalette() {
 }
 
 const palette = generatePalette()
-const paletteSvg = `<svg width="100%" viewBox="0 0 ${PALETTE_WIDTH} ${palette.height}" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+const paletteSvg = `<svg width="${PALETTE_WIDTH}" height="${palette.height}" viewBox="0 0 ${PALETTE_WIDTH} ${palette.height}" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
   ${fontStyle}
   <rect width="100%" height="100%" fill="#fafafa" />
   ${palette.svg}
@@ -433,3 +439,10 @@ const paletteSvg = `<svg width="100%" viewBox="0 0 ${PALETTE_WIDTH} ${palette.he
 
 fs.writeFileSync('palette.svg', paletteSvg, 'utf-8')
 console.log('Generated palette.svg')
+
+const resvgPalette = new Resvg(paletteSvg, {
+  background: '#fafafa',
+  fitTo: { mode: 'width', value: PALETTE_WIDTH * 2 }
+})
+fs.writeFileSync('palette.png', resvgPalette.render().asPng())
+console.log('Generated palette.png')

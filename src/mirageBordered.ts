@@ -1,7 +1,16 @@
 import color from './color.js'
 
-const u = color('1F2430')
-const e = color('232834')
+// primary bg
+// editor bg
+// bordered line
+// secondary_bg
+// panel bg
+// scheme.ui.fg
+// scheme.editor.line
+
+
+const u = color('3b4557') // primary bg
+const e = color('554563') // editor bg
 
 const syntax = {
   tag: e`5CCFE6`,
@@ -25,8 +34,8 @@ const vcs = {
 
 const editor = {
   fg: e`CBCCC6`,
-  bg: e`1F2430`,
-  line: e`191E2A`,
+  bg: e`554563`, // editor bg
+  line: e`475266`.alpha(0.5),
   selection: {
     active: e`3399FF`.alpha(0.2),
     inactive: e`66A3FF`.alpha(0.12)
@@ -70,26 +79,28 @@ const editor = {
 }
 
 const ui = {
-  fg: u`707A8C`,
-  bg: u`1F2430`,
-  secondary_bg: u`1F2430`.alpha(0.4),
-  line: u`171B24`,
+  fg: u`9BA9C2`,
+  bg: u`3b4557`, // primary bg
+  secondary_bg: u`413F5C`,
+  line: u`575B66`, // bordered line
   selection: {
     active: u`637599`.alpha(0.15),
     normal: u`69758C`.alpha(0.12)
   },
   panel: {
-    bg: u`282E3B`,
+    bg: u`413F5C`,
     shadow: u`000000`.alpha(0.2)
   },
   // Semantic UI colors
-  focus_border: u`171B24`, // ui.line
-  activity_bar_border: u`171B24`, // ui.line
-  minimap_bg: e`1F2430`, // editor.bg
-  side_bar_bg: u`1F2430`.alpha(0.4), // ui.secondary_bg
-  editor_group_header_bg: u`1F2430`.alpha(0.4), // ui.secondary_bg
-  status_bar_bg: u`1F2430`, // ui.bg
-  title_bar_bg: u`1F2430` // ui.bg
+  focus_border: u`575B66`,        // bordered line
+  activity_bar_border: u`575B66`, // bordered line
+  
+  minimap_bg: e`413F5C`,             // secondary_bg
+  side_bar_bg: u`413F5C`,            // secondary_bg
+  editor_group_header_bg: u`413F5C`, // secondary_bg
+  
+  status_bar_bg: u`3b4557`, // primary bg
+  title_bar_bg: u`3b4557`   // primary bg
 }
 
 const common = {

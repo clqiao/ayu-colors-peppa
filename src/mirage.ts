@@ -1,7 +1,16 @@
 import color from './color.js'
 
-const u = color('1F2430')
-const e = color('242936')
+// primary bg
+// editor bg
+// unbordered line
+// secondary_bg
+// panel bg
+// scheme.ui.fg
+// scheme.editor.line
+
+
+const u = color('3b4557') // primary bg
+const e = color('554563') // editor bg
 
 const syntax = {
   /** HTML/XML tags, language variables, library classes, CSS properties */
@@ -41,9 +50,9 @@ const editor = {
   /** Main editor text color */
   fg: e`CCCAC2`,
   /** Editor background */
-  bg: e`242936`,
+  bg: e`554563`,
   /** Current line highlight background */
-  line: e`1A1F29`,
+  line: e`475266`.alpha(0.5),
   selection: {
     /** Selection highlight when editor is focused */
     active: e`409FFF`.alpha(0.25),
@@ -97,13 +106,13 @@ const editor = {
 
 const ui = {
   /** UI text (sidebars, panels, menus) */
-  fg: u`707A8C`,
+  fg: u`9BA9C2`,
   /** UI background areas */
-  bg: u`1F2430`,
+  bg: u`3b4557`, // primary bg
   /** Secondary UI background (derived from bg) */
-  secondary_bg: u`1F2430`.alpha(0.4),
+  secondary_bg: u`413F5C`,
   /** Separator lines between UI sections */
-  line: u`171B24`,
+  line: u`575B66`.alpha(0), // unbordered line
   selection: {
     /** Active/hovered UI item */
     active: u`637599`.alpha(0.15),
@@ -112,18 +121,20 @@ const ui = {
   },
   panel: {
     /** Panel backgrounds (explorer, debug) */
-    bg: u`282E3B`,
+    bg: u`664D5D`,
     /** Drop shadows for panels */
     shadow: u`000000`.alpha(0.2)
   },
   // Semantic UI colors
-  focus_border: u`1F2430`.alpha(0.4), // unbordered_ui.secondary_bg
-  activity_bar_border: u`171B24`, // unbordered_ui.line
-  minimap_bg: u`1F2430`.alpha(0.4), // unbordered_ui.secondary_bg
-  side_bar_bg: u`1F2430`.alpha(0.4), // unbordered_ui.secondary_bg
-  editor_group_header_bg: u`1F2430`.alpha(0.4), // unbordered_ui.secondary_bg
-  status_bar_bg: u`1F2430`, // unbordered_ui.bg
-  title_bar_bg: u`1F2430` // unbordered_ui.bg
+  focus_border: u`575B66`.alpha(0),            // unbordered line
+  activity_bar_border: u`575B66`.alpha(0),     // unbordered line
+  
+  minimap_bg: u`413F5C`,             // secondary_bg
+  side_bar_bg: u`413F5C`,            // secondary_bg
+  editor_group_header_bg: u`413F5C`, // secondary_bg
+  
+  status_bar_bg: u`3b4557`, // primary bg
+  title_bar_bg: u`3b4557`   // primary bg
 }
 
 const common = {
