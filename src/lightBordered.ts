@@ -98,11 +98,11 @@ const ui = {
     /** UI text (sidebars, panels, menus) */
     fg: u`727E8F`,
     /** UI background areas */
-    bg: u`e8eaec`,
+    bg: u`e8eaec`,  // primary bg
     /** Secondary UI background (derived from bg) */
-    secondary_bg: u`F8F9FA`,
+    secondary_bg: u`F8F9FA`, // secondary_bg
     /** Separator lines between UI sections */
-    line: u`6B7D8F`.alpha(0.3),
+    line: u`6B7D8F`.alpha(0.3), // bordered line
     selection: {
         /** Active/hovered UI item */
         active: u`56728F`.alpha(0.12),
@@ -111,18 +111,20 @@ const ui = {
     },
     panel: {
         /** Panel backgrounds (explorer, debug) */
-        bg: u`F8F9FA`,
+        bg: u`F8F9FA`,  // secondary_bg
         /** Drop shadows for panels */
         shadow: u`6B7D8F`.alpha(0.3)
     },
     // Semantic UI colors
-    focus_border: u`6B7D8F`.alpha(0.3), // unbordered_ui.secondary_bg
-    activity_bar_border: u`6B7D8F`.alpha(0.3), // unbordered_ui.line
-    minimap_bg: u`F8F9FA`, // unbordered_ui.secondary_bg
-    side_bar_bg: u`F8F9FA`, // unbordered_ui.secondary_bg
-    editor_group_header_bg: u`F8F9FA`, // unbordered_ui.secondary_bg
-    status_bar_bg: u`e8eaec`, // unbordered_ui.bg
-    title_bar_bg: u`e8eaec` // unbordered_ui.bg
+    focus_border: u`6B7D8F`.alpha(0.3),        // bordered line
+    activity_bar_border: u`6B7D8F`.alpha(0.3), // bordered line
+
+    minimap_bg: u`F8F9FA`,             // secondary_bg
+    side_bar_bg: u`F8F9FA`,            // secondary_bg
+    editor_group_header_bg: u`F8F9FA`, // secondary_bg
+
+    status_bar_bg: u`e8eaec`, // primary bg
+    title_bar_bg: u`e8eaec`   // primary bg
 }
 
 const common = {
