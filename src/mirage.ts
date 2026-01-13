@@ -9,7 +9,7 @@ import color from './color.js'
 // scheme.editor.line
 
 
-const u = color('3b4557') // primary bg
+const u = color('353350') // primary bg 353350
 const e = color('554563') // editor bg
 
 const syntax = {
@@ -108,7 +108,7 @@ const ui = {
     /** UI text (sidebars, panels, menus) */
     fg: u`9BA9C2`,
     /** UI background areas */
-    bg: u`3b4557`, // primary bg
+    bg: u`353350`, // primary bg
     /** Secondary UI background (derived from bg) */
     secondary_bg: u`413F5C`,
     /** Separator lines between UI sections */
@@ -133,8 +133,8 @@ const ui = {
     side_bar_bg: u`413F5C`,            // secondary_bg
     editor_group_header_bg: u`413F5C`, // secondary_bg
 
-    status_bar_bg: u`3b4557`, // primary bg
-    title_bar_bg: u`3b4557`   // primary bg
+    status_bar_bg: u`353350`, // primary bg
+    title_bar_bg: u`353350`   // primary bg
 }
 
 const common = {

@@ -9,7 +9,7 @@ import color from './color.js'
 // scheme.editor.line
 
 
-const u = color('3b4557') // primary bg
+const u = color('353350') // primary bg
 const e = color('554563') // editor bg
 
 const syntax = {
@@ -80,7 +80,7 @@ const editor = {
 
 const ui = {
     fg: u`9BA9C2`,
-    bg: u`3b4557`, // primary bg
+    bg: u`353350`, // primary bg
     secondary_bg: u`413F5C`,
     line: u`575B66`, // bordered line
     selection: {
@@ -99,8 +99,8 @@ const ui = {
     side_bar_bg: u`413F5C`,            // secondary_bg
     editor_group_header_bg: u`413F5C`, // secondary_bg
 
-    status_bar_bg: u`3b4557`, // primary bg
-    title_bar_bg: u`3b4557`   // primary bg
+    status_bar_bg: u`353350`, // primary bg
+    title_bar_bg: u`353350`   // primary bg
 }
 
 const common = {
