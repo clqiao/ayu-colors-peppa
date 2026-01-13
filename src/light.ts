@@ -122,7 +122,7 @@ const ui = {
     minimap_bg: u`f0f2f4`,             // secondary_bg
     side_bar_bg: u`f0f2f4`,            // secondary_bg
     editor_group_header_bg: u`f0f2f4`, // secondary_bg
-    
+
     status_bar_bg: u`e0e3e6`, // primary bg
     title_bar_bg: u`e0e3e6`   // primary bg
 }

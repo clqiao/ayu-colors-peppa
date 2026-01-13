@@ -12,170 +12,170 @@ const u = color('202224') // primary bg
 const e = color('383a3c') // editor bg
 
 const syntax = {
-  /** HTML/XML tags, language variables, library classes, CSS properties */
-  tag: e`39BAE6`,
-  /** Function names, function calls, tag attributes, list bullets */
-  func: e`FFB454`,
-  /** Type names, class names, CSS tag names, markup links */
-  entity: e`59C2FF`,
-  /** String literals, imports/packages, markup headings */
-  string: e`AAD94C`,
-  /** Regular expressions, escape characters, blockquotes */
-  regexp: e`95E6CB`,
-  /** Member variables, library functions, markup italic/bold */
-  markup: e`F07178`,
-  /** Keywords, storage types, template expressions */
-  keyword: e`FF8F40`,
-  /** Decorators, annotations, markup strikethrough */
-  special: e`E6C08A`,
-  /** Code comments (typically rendered italic) */
-  comment: e`99ADBF`.alpha(0.55),
-  /** Named constants, function parameters */
-  constant: e`D2A6FF`,
-  /** Binary operators, accessor punctuation */
-  operator: e`F29668`
+    /** HTML/XML tags, language variables, library classes, CSS properties */
+    tag: e`39BAE6`,
+    /** Function names, function calls, tag attributes, list bullets */
+    func: e`FFB454`,
+    /** Type names, class names, CSS tag names, markup links */
+    entity: e`59C2FF`,
+    /** String literals, imports/packages, markup headings */
+    string: e`AAD94C`,
+    /** Regular expressions, escape characters, blockquotes */
+    regexp: e`95E6CB`,
+    /** Member variables, library functions, markup italic/bold */
+    markup: e`F07178`,
+    /** Keywords, storage types, template expressions */
+    keyword: e`FF8F40`,
+    /** Decorators, annotations, markup strikethrough */
+    special: e`E6C08A`,
+    /** Code comments (typically rendered italic) */
+    comment: e`99ADBF`.alpha(0.55),
+    /** Named constants, function parameters */
+    constant: e`D2A6FF`,
+    /** Binary operators, accessor punctuation */
+    operator: e`F29668`
 }
 
 const vcs = {
-  /** New files/lines in version control */
-  added: e`70BF56`,
-  /** Changed files/lines in version control */
-  modified: e`73B8FF`,
-  /** Deleted files/lines in version control */
-  removed: e`F26D78`
+    /** New files/lines in version control */
+    added: e`70BF56`,
+    /** Changed files/lines in version control */
+    modified: e`73B8FF`,
+    /** Deleted files/lines in version control */
+    removed: e`F26D78`
 }
 
 const editor = {
-  /** Main editor text color */
-  fg: e`BFBDB6`,
-  /** Editor background */
-  bg: e`383a3c`, // editor bg
-  /** Current line highlight background */
-  line: e`475266`.alpha(0.5),
-  selection: {
-    /** Selection highlight when editor is focused */
-    active: e`3388FF`.alpha(0.25),
-    /** Selection highlight when editor is unfocused */
-    inactive: e`80B5FF`.alpha(0.15)
-  },
-  findMatch: {
-    /** Current search match highlight */
-    active: e`4C4126`,
-    /** Other search match highlights */
-    inactive: e`4C4126`.alpha(0.5)
-  },
-  gutter: {
-    /** Line number for current line */
-    active: e`6C7380`.alpha(0.9),
-    /** Line numbers for other lines */
-    normal: e`6C7380`.alpha(0.6)
-  },
-  indentGuide: {
-    /** Indent guide at current level */
-    active: e`6C7380`.alpha(0.5),
-    /** Indent guides at other levels */
-    normal: e`6C7380`.alpha(0.2)
-  }
-  ,
-  indentGuide1: {
-    active: e`6C7380`.alpha(0.5),
-    normal: e`6C7380`.alpha(0.2)
-  },
-  indentGuide2: {
-    active: e`6C7380`.alpha(0.5),
-    normal: e`6C7380`.alpha(0.2)
-  },
-  indentGuide3: {
-    active: e`6C7380`.alpha(0.5),
-    normal: e`6C7380`.alpha(0.2)
-  },
-  indentGuide4: {
-    active: e`6C7380`.alpha(0.5),
-    normal: e`6C7380`.alpha(0.2)
-  },
-  indentGuide5: {
-    active: e`6C7380`.alpha(0.5),
-    normal: e`6C7380`.alpha(0.2)
-  },
-  indentGuide6: {
-    active: e`6C7380`.alpha(0.5),
-    normal: e`6C7380`.alpha(0.2)
-  }
+    /** Main editor text color */
+    fg: e`BFBDB6`,
+    /** Editor background */
+    bg: e`383a3c`, // editor bg
+    /** Current line highlight background */
+    line: e`475266`.alpha(0.5),
+    selection: {
+        /** Selection highlight when editor is focused */
+        active: e`3388FF`.alpha(0.25),
+        /** Selection highlight when editor is unfocused */
+        inactive: e`80B5FF`.alpha(0.15)
+    },
+    findMatch: {
+        /** Current search match highlight */
+        active: e`4C4126`,
+        /** Other search match highlights */
+        inactive: e`4C4126`.alpha(0.5)
+    },
+    gutter: {
+        /** Line number for current line */
+        active: e`6C7380`.alpha(0.9),
+        /** Line numbers for other lines */
+        normal: e`6C7380`.alpha(0.6)
+    },
+    indentGuide: {
+        /** Indent guide at current level */
+        active: e`6C7380`.alpha(0.5),
+        /** Indent guides at other levels */
+        normal: e`6C7380`.alpha(0.2)
+    }
+    ,
+    indentGuide1: {
+        active: e`6C7380`.alpha(0.5),
+        normal: e`6C7380`.alpha(0.2)
+    },
+    indentGuide2: {
+        active: e`6C7380`.alpha(0.5),
+        normal: e`6C7380`.alpha(0.2)
+    },
+    indentGuide3: {
+        active: e`6C7380`.alpha(0.5),
+        normal: e`6C7380`.alpha(0.2)
+    },
+    indentGuide4: {
+        active: e`6C7380`.alpha(0.5),
+        normal: e`6C7380`.alpha(0.2)
+    },
+    indentGuide5: {
+        active: e`6C7380`.alpha(0.5),
+        normal: e`6C7380`.alpha(0.2)
+    },
+    indentGuide6: {
+        active: e`6C7380`.alpha(0.5),
+        normal: e`6C7380`.alpha(0.2)
+    }
 }
 
 const ui = {
-  /** UI text (sidebars, panels, menus) */
-  fg: u`9BA4B1`,
-  /** UI background areas */
-  bg: u`202224`, // primary bg
-  /** Secondary UI background (derived from bg) */
-  secondary_bg: u`2a2c2e`,
-  /** Separator lines between UI sections */
-  line: u`1B1F29`.alpha(0), // unbordered line
-  selection: {
-    /** Active/hovered UI item */
-    active: u`475266`.alpha(0.25),
-    /** Selected UI item */
-    normal: u`475266`.alpha(0.2)
-  },
-  panel: {
-    /** Panel backgrounds (explorer, debug) */
-    bg: u`413D39`,
-    /** Drop shadows for panels */
-    shadow: u`000000`.alpha(0.5)
-  },
-  // Semantic UI colors
-  focus_border: u`1B1F29`.alpha(0),        // unbordered line
-  activity_bar_border: u`1B1F29`.alpha(0), // unbordered line
-  
-  minimap_bg: u`2a2c2e`,             // secondary_bg
-  side_bar_bg: u`2a2c2e`,            // secondary_bg
-  editor_group_header_bg: u`2a2c2e`, // secondary_bg
-  
-  status_bar_bg: u`202224`, // primary bg
-  title_bar_bg: u`202224`   // primary bg
+    /** UI text (sidebars, panels, menus) */
+    fg: u`9BA4B1`,
+    /** UI background areas */
+    bg: u`202224`, // primary bg
+    /** Secondary UI background (derived from bg) */
+    secondary_bg: u`2a2c2e`,
+    /** Separator lines between UI sections */
+    line: u`1B1F29`.alpha(0), // unbordered line
+    selection: {
+        /** Active/hovered UI item */
+        active: u`475266`.alpha(0.25),
+        /** Selected UI item */
+        normal: u`475266`.alpha(0.2)
+    },
+    panel: {
+        /** Panel backgrounds (explorer, debug) */
+        bg: u`413D39`,
+        /** Drop shadows for panels */
+        shadow: u`000000`.alpha(0.5)
+    },
+    // Semantic UI colors
+    focus_border: u`1B1F29`.alpha(0),        // unbordered line
+    activity_bar_border: u`1B1F29`.alpha(0), // unbordered line
+
+    minimap_bg: u`2a2c2e`,             // secondary_bg
+    side_bar_bg: u`2a2c2e`,            // secondary_bg
+    editor_group_header_bg: u`2a2c2e`, // secondary_bg
+
+    status_bar_bg: u`202224`, // primary bg
+    title_bar_bg: u`202224`   // primary bg
 }
 
 const common = {
-  accent: {
-    /** Primary accent color for highlights, caret, focus states */
-    tint: u`E6B450`,
-    /** Content color on accent backgrounds */
-    on: u`805600`
-  },
-  /** Error messages and error states */
-  error: u`D95757`
-  ,
-  /** Basic primary colors for use in themes */
-  red: u`FF0000`,
-  green: u`00FF00`,
-  blue: u`0000FF`
+    accent: {
+        /** Primary accent color for highlights, caret, focus states */
+        tint: u`E6B450`,
+        /** Content color on accent backgrounds */
+        on: u`805600`
+    },
+    /** Error messages and error states */
+    error: u`D95757`
+    ,
+    /** Basic primary colors for use in themes */
+    red: u`FF0000`,
+    green: u`00FF00`,
+    blue: u`0000FF`
 }
 
 const terminal = {
-  black: ui.line,
-  red: syntax.markup.darken(0.1),
-  green: vcs.added,
-  yellow: syntax.func.darken(0.1),
-  blue: syntax.entity.darken(0.1),
-  magenta: syntax.constant.darken(0.1),
-  cyan: syntax.regexp.darken(0.1),
-  white: u`c7c7c7`,
-  brightBlack: u`686868`,
-  brightRed: syntax.markup,
-  brightGreen: syntax.string,
-  brightYellow: syntax.func,
-  brightBlue: syntax.entity,
-  brightMagenta: syntax.constant,
-  brightCyan: syntax.regexp,
-  brightWhite: u`ffffff`
+    black: ui.line,
+    red: syntax.markup.darken(0.1),
+    green: vcs.added,
+    yellow: syntax.func.darken(0.1),
+    blue: syntax.entity.darken(0.1),
+    magenta: syntax.constant.darken(0.1),
+    cyan: syntax.regexp.darken(0.1),
+    white: u`c7c7c7`,
+    brightBlack: u`686868`,
+    brightRed: syntax.markup,
+    brightGreen: syntax.string,
+    brightYellow: syntax.func,
+    brightBlue: syntax.entity,
+    brightMagenta: syntax.constant,
+    brightCyan: syntax.regexp,
+    brightWhite: u`ffffff`
 }
 
 export default {
-  syntax,
-  vcs,
-  editor,
-  ui,
-  common,
-  terminal
+    syntax,
+    vcs,
+    editor,
+    ui,
+    common,
+    terminal
 }
