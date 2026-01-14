@@ -114,17 +114,7 @@ const ui = {
         bg: u`F8F9FA`,  // secondary_bg
         /** Drop shadows for panels */
         shadow: u`6B7D8F`.alpha(0.3)
-    },
-    // Semantic UI colors
-    focus_border: u`6B7D8F`.alpha(0.3),        // bordered line
-    activity_bar_border: u`6B7D8F`.alpha(0.3), // bordered line
-
-    minimap_bg: u`F8F9FA`,             // secondary_bg
-    side_bar_bg: u`F8F9FA`,            // secondary_bg
-    editor_group_header_bg: u`F8F9FA`, // secondary_bg
-
-    status_bar_bg: u`e8eaec`, // primary bg
-    title_bar_bg: u`e8eaec`   // primary bg
+    }
 }
 
 const common = {

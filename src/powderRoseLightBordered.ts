@@ -83,17 +83,7 @@ const ui = {
     panel: {
         bg: u`fcf8f8`,
         shadow: u`6B7D8F`.alpha(0.3)
-    },
-    // Semantic UI colors
-    focus_border: u`c8a8a8`.alpha(0.5), // ui.line
-    activity_bar_border: u`c8a8a8`.alpha(0.5), // ui.line
-
-    minimap_bg: e`fcf8f8`,             // secondary_bg
-    side_bar_bg: u`fcf8f8`,            // secondary_bg
-    editor_group_header_bg: u`fcf8f8`, // secondary_bg
-
-    status_bar_bg: u`f8e8e8`, // primary bg
-    title_bar_bg: u`f8e8e8`   // primary bg
+    }
 }
 
 const common = {
