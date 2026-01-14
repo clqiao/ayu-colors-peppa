@@ -100,7 +100,7 @@ const ui = {
     /** UI background areas */
     bg: u`e0e3e6`, // primary bg
     /** Secondary UI background (derived from bg) */
-    secondary_bg: u`f0f2f4`,  // secondary_bg
+    secondary_bg: u`f0f2f4`,
     /** Separator lines between UI sections */
     line: u`6B7D8F`.alpha(0), // unbordered line
     selection: {

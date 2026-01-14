@@ -51,7 +51,7 @@ const editor = {
     /** Editor background */
     bg: e`383a3c`, // editor bg
     /** Current line highlight background */
-    line: e`475266`.alpha(0.5),
+    line: e`475266`.alpha(0.5), // scheme.editor.line
     selection: {
         /** Selection highlight when editor is focused */
         active: e`3388FF`.alpha(0.25),
@@ -105,7 +105,7 @@ const editor = {
 
 const ui = {
     /** UI text (sidebars, panels, menus) */
-    fg: u`9BA4B1`,
+    fg: u`9BA4B1`, // scheme.ui.fg
     /** UI background areas */
     bg: u`202224`, // primary bg
     /** Secondary UI background (derived from bg) */
@@ -120,7 +120,7 @@ const ui = {
     },
     panel: {
         /** Panel backgrounds (explorer, debug) */
-        bg: u`413D39`,
+        bg: u`413D39`, // panel bg
         /** Drop shadows for panels */
         shadow: u`000000`.alpha(0.5)
     }
