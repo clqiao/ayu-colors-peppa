@@ -119,7 +119,7 @@ const ui = {
     },
     panel: {
         /** Panel backgrounds (explorer, debug) */
-        bg: u`FBFFEB`, // panel bg
+        bg: u`FAEEE0`, // panel bg
         /** Drop shadows for panels */
         shadow: u`6B7D8F`.alpha(0.3)
     }
