@@ -6,6 +6,8 @@ import rawLightBordered from './lightBordered.js'
 import rawMirageBordered from './mirageBordered.js'
 import rawPowderRoseLight from './powderRoseLight.js'
 import rawPowderRoseLightBordered from './powderRoseLightBordered.js'
+import rawShibaInuLight from './shibaInuLight.js'
+import rawShibaInuLightBordered from './shibaInuLightBordered.js'
 
 export type Scheme = typeof rawDark
 
@@ -17,5 +19,7 @@ export const lightBordered: Scheme = rawLightBordered
 export const mirageBordered: Scheme = rawMirageBordered
 export const powderRoseLight: Scheme = rawPowderRoseLight
 export const powderRoseLightBordered: Scheme = rawPowderRoseLightBordered
+export const shibaInuLight: Scheme = rawShibaInuLight
+export const shibaInuLightBordered: Scheme = rawShibaInuLightBordered
 
 export { alphaBlend } from './color.js'

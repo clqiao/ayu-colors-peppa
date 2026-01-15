@@ -36,6 +36,8 @@ const themes = [
   { name: 'Light Bordered', scheme: colors.lightBordered },
   { name: 'Powder Rose Light', scheme: colors.powderRoseLight },
   { name: 'Powder Rose Light Bordered', scheme: colors.powderRoseLightBordered },
+  { name: 'Shiba Inu Light', scheme: colors.shibaInuLight },
+  { name: 'Shiba Inu Light Bordered', scheme: colors.shibaInuLightBordered },
   { name: 'Mirage', scheme: colors.mirage },
   { name: 'Mirage Bordered', scheme: colors.mirageBordered },
   { name: 'Dark', scheme: colors.dark },

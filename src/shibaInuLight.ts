@@ -1,7 +1,15 @@
 import color from './color.js'
 
-const u = color('e8eaec')
-const e = color('ffffff')
+// primary bg
+// editor bg
+// unbordered line
+// secondary_bg
+// panel bg
+// scheme.ui.fg
+// scheme.editor.line
+
+const u = color('FDF1D6') // primary bg
+const e = color('ffffff') // editor bg
 
 const syntax = {
     /** HTML/XML tags, language variables, library classes, CSS properties */
@@ -41,9 +49,9 @@ const editor = {
     /** Main editor text color */
     fg: e`5C6166`,
     /** Editor background */
-    bg: e`ffffff`,
+    bg: e`ffffff`, // editor bg
     /** Current line highlight background */
-    line: e`828E9F`.alpha(0.1),
+    line: e`DE8C44`.alpha(0.1), // scheme.editor.line
     selection: {
         /** Selection highlight when editor is focused */
         active: e`035BD6`.alpha(0.15),
@@ -96,22 +104,22 @@ const editor = {
 
 const ui = {
     /** UI text (sidebars, panels, menus) */
-    fg: u`57687F`,
+    fg: u`735639`, // scheme.ui.fg
     /** UI background areas */
-    bg: u`e8eaec`,  // primary bg
+    bg: u`FDF1D6`, // primary bg
     /** Secondary UI background (derived from bg) */
-    secondary_bg: u`F8F9FA`, // secondary_bg
+    secondary_bg: u`FFFAED`,
     /** Separator lines between UI sections */
-    line: u`6B7D8F`.alpha(0.3), // bordered line
+    line: u`6B7D8F`.alpha(0), // unbordered line
     selection: {
         /** Active/hovered UI item */
-        active: u`56728F`.alpha(0.12),
+        active: u`DE8C44`.alpha(0.3),
         /** Selected UI item */
-        normal: u`6B7D8F`.alpha(0.12)
+        normal: u`DE8C44`.alpha(0.2)
     },
     panel: {
         /** Panel backgrounds (explorer, debug) */
-        bg: u`F8F9FA`,  // secondary_bg
+        bg: u`FBFFEB`, // panel bg
         /** Drop shadows for panels */
         shadow: u`6B7D8F`.alpha(0.3)
     }
@@ -120,9 +128,9 @@ const ui = {
 const common = {
     accent: {
         /** Primary accent color for highlights, caret, focus states */
-        tint: u`F29718`,
+        tint: u`EEC255`,
         /** Content color on accent backgrounds */
-        on: u`57687F`
+        on: u`735639`
     },
     /** Error messages and error states */
     error: u`E65050`

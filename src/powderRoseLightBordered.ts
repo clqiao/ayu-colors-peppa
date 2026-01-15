@@ -72,7 +72,7 @@ const editor = {
 }
 
 const ui = {
-    fg: u`a08080`,
+    fg: u`806060`,
     bg: u`f8e8e8`,
     secondary_bg: u`fcf8f8`,
     line: u`c8a8a8`.alpha(0.5),

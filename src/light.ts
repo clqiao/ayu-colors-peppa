@@ -122,7 +122,7 @@ const common = {
         /** Primary accent color for highlights, caret, focus states */
         tint: u`F29718`,
         /** Content color on accent backgrounds */
-        on: u`804B00`
+        on: u`57687F`
     },
     /** Error messages and error states */
     error: u`E65050`
